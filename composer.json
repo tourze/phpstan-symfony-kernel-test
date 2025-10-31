@@ -1,0 +1,41 @@
+{
+  "name": "tourze/phpstan-symfony-kernel-test",
+  "description": "",
+  "type": "library",
+  "homepage": "https://github.com/tourze/phpstan-symfony-kernel-test",
+  "license": "MIT",
+  "require": {
+    "composer-runtime-api": "^2.0",
+    "symfony/console": "^7.3",
+    "symfony/dependency-injection": "^7.3"
+  },
+  "require-dev": {
+    "doctrine/doctrine-bundle": "^2.13",
+    "easycorp/easyadmin-bundle": "^4",
+    "monolog/monolog": "^3.1",
+    "phpat/phpat": "^0.11.9",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11.5",
+    "symfony/event-dispatcher": "^7.3",
+    "tourze/enum-extra": "0.1.*",
+    "tourze/phpunit-doctrine-entity": "0.0.*",
+    "tourze/phpunit-enum": "0.0.*",
+    "tourze/phpunit-symfony-kernel-test": "0.0.*",
+    "tourze/phpunit-symfony-web-test": "0.0.*",
+    "tourze/symfony-aop-async-bundle": "0.0.*",
+    "tourze/symfony-aop-bundle": "~0.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tourze\\PHPStanSymfonyKernelTest\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tourze\\PHPStanSymfonyKernelTest\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "release-version": "0.1.*"
+  }
+}

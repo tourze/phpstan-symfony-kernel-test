@@ -1,0 +1,129 @@
+services:
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\NoLazyReadonlyAutoconfigureRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\NoTestSupportFilesRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\EasyAdminDateTimeFieldFormatRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\ServiceTestMustNotInheritTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    # 架构层
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Architecture\RepositoryTest
+        tags:
+            - phpat.test
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Architecture\CommandTest
+        tags:
+            - phpat.test
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Architecture\BundleTest
+        tags:
+            - phpat.test
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Architecture\ControllerTest
+        tags:
+            - phpat.test
+
+    # DependencyInjection
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\DependencyInjection\PreferAutoExtensionRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\DependencyInjection\ExtensionTestMustInheritAbstractDependencyInjectionExtensionTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Security\AccessTokenHandlerTestMustInheritAbstractIntegrationTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    # 事件订阅
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Event\EventTestMustInheritAbstractEventTestCaseRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\EventSubscriber\EventSubscriberTestMustInheritAbstractIntegrationTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    # Repository
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Repository\RepositoryNoTransactionHandlingRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Repository\RepositoryTestMustHaveFindAllTestCasesRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Repository\RepositoryTestMustHaveFindTestCasesRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Repository\RepositoryTestMustHaveLockingTestCasesRule
+        tags:
+            - phpstan.rules.rule
+
+    # 命令工具
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Command\CommandTestMustUseCommandTesterRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Command\NoDirectCommandInstantiationInTestRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Command\CommandDescriptionRequiredRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Command\TestForCommandMustExtendAbstractCommandTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Config\BundleServiceConfigRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanSymfonyKernelTest\Config\ForbidConfigurationInterfaceRule
+        tags:
+            - phpstan.rules.rule
+
+rules:
+    - Tourze\PHPStanSymfonyKernelTest\Command\CommandDocumentedInReadmeRule
+    - Tourze\PHPStanSymfonyKernelTest\Command\CommandNameFormatRule
+    - Tourze\PHPStanSymfonyKernelTest\Command\ForbidSetNameMethodRule
+    - Tourze\PHPStanSymfonyKernelTest\Command\RequireAsCommandAttributeRule
+
+    # 集成测试
+    - Tourze\PHPStanSymfonyKernelTest\Integration\NoAbstractIntegrationTestCaseRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\UseAbstractIntegrationTestCaseRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\RequireRunInSeparateProcessRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\UseOnSetUpMethodRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\NoDirectEntityManagerAccessRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\PreferAbstractIntegrationTestCaseRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\NoDirectKernelTestCaseInheritanceRule
+    - Tourze\PHPStanSymfonyKernelTest\Integration\NoDirectInstantiationOfCoveredClassRule
+
+    # DataFixture 相关规则
+    - Tourze\PHPStanSymfonyKernelTest\DataFixture\DataFixturesConfigurationRule
+    - Tourze\PHPStanSymfonyKernelTest\DataFixture\DataFixtureReferenceMethodsRule
+    - Tourze\PHPStanSymfonyKernelTest\DataFixture\DataFixtureReferenceNamingRule
+    - Tourze\PHPStanSymfonyKernelTest\DataFixture\DataFixtureImageUrlRule
+    - Tourze\PHPStanSymfonyKernelTest\DataFixture\DataFixtureNamespaceRule
