@@ -1,0 +1,1 @@
+# phpstan-symfony-kernel-test
