@@ -17,7 +17,7 @@
     "phpstan/phpstan": "^2.1",
     "phpunit/phpunit": "^11.5",
     "symfony/event-dispatcher": "^7.3",
-    "tourze/enum-extra": "1.*",
+    "tourze/enum-extra": "1.0.*",
     "tourze/phpunit-doctrine-entity": "1.*",
     "tourze/phpunit-enum": "1.*",
     "tourze/phpunit-symfony-kernel-test": "1.0.*",
