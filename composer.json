@@ -20,8 +20,8 @@
     "tourze/enum-extra": "1.0.*",
     "tourze/phpunit-doctrine-entity": "1.*",
     "tourze/phpunit-enum": "1.*",
-    "tourze/phpunit-symfony-kernel-test": "1.0.*",
-    "tourze/phpunit-symfony-web-test": "1.*",
+    "tourze/phpunit-symfony-kernel-test": "2.0.*",
+    "tourze/phpunit-symfony-web-test": "2.0.*",
     "tourze/symfony-aop-async-bundle": "1.0.*",
     "tourze/symfony-aop-bundle": "1.0.*"
   },
